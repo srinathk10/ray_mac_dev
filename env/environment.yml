@@ -1,0 +1,8 @@
+name: myenv
+channels:
+  - defaults
+dependencies:
+  - bazel=6.5.0
+  - python=3.9
+  - pip
+  - pip:
