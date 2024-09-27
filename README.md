@@ -73,12 +73,10 @@ srinath.krishnamachari@srinath ray_mac_dev %
 
 ## Enter the Ray dev container
 
-To enter the dev container, 
+To enter the dev container, run './devSetup.sh --run' or './devSetup.sh --exec bash'.
+
 
 ```sh
-
-Run './devSetup.sh --run' again or './devSetup.sh --exec bash'.
-
 srinath.krishnamachari@srinath ray_mac_dev % ./devSetup.sh --run
 Container 'ray-build' is already running.
 Entering the container...
@@ -86,7 +84,9 @@ To run a command as administrator (user "root"), use "sudo <command>".
 See "man sudo_root" for details.
 
 srinath_krishnamachari@docker-desktop$
+```
 
+```sh
 srinath.krishnamachari@srinath ray_mac_dev % ./devSetup.sh --exec bash
 Executing command inside 'ray-build' container...
 To run a command as administrator (user "root"), use "sudo <command>".
@@ -98,9 +98,9 @@ srinath_krishnamachari@docker-desktop$
 
 ## Build Ray
 
-Follow the instructions [here](https://docs.ray.io/en/latest/ray-contribute/development.html#building-ray-on-linux-macos-full) and build the project. Note that the build commands need to run inside the container.
+Follow the instructions [here](https://docs.ray.io/en/latest/ray-contribute/development.html#building-ray-on-linux-macos-full) and build the project. Note that the build commands need to be run inside the container.
 
-If your build fails with below error, limit the resources consumed by bazel and try again. Build may just run a lot slower, but will run to completion.
+If your build fails with below error, limit the resources consumed by bazel and try again. Build may just run a lot slower, but should run to completion.
 
 ```sh
 srinath_krishnamachari@docker-desktop$ pip install -e . --verbose
