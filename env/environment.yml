@@ -147,4 +147,3 @@ dependencies:
       - wrapt==1.16.0
       - yarl==1.14.0
       - zipp==3.20.2
-prefix: /home/srinath_krishnamachari/.conda/envs/myenv
