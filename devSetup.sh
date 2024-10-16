@@ -32,7 +32,10 @@ run_container() {
         docker start ray-build
     else
         echo "Running new Docker container mounting ${WORKSPACE}..."
-        docker run -itd --name ray-build --privileged --network host -v ${DOCKER_SOCKET}:${DOCKER_SOCKET} -v "$(pwd):${WORKSPACE}" ray-build
+        free_pages=$(vm_stat | grep "Pages free" | awk '{print $3}' | sed 's/\.//')
+        free_memory_kb=$(($free_pages * 4096))
+        free_memory_mb=$(($free_memory_kb / 1024 / 1024))
+        docker run -itd --name ray-build --shm-size=${free_memory_mb}mb --privileged --network host -v ${DOCKER_SOCKET}:${DOCKER_SOCKET} -v "$(pwd):${WORKSPACE}" ray-build
     fi
 }
 
