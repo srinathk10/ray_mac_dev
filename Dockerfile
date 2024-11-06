@@ -88,7 +88,7 @@ ENV PATH=/opt/conda/bin:$PATH
 USER ${USER_NAME}
 
 # Set the user's home directory as the working directory
-WORKDIR /home/${USER_NAME}/Anyscale
+WORKDIR /home/${USER_NAME}/myworkspace
 
 # Copy the environment.yml file to the working directory
 COPY env/environment.yml .

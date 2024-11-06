@@ -4,7 +4,7 @@ USERHOME=/home/$(whoami)
 DOCKER_SOCKET=${DOCKER_SOCKET:-/var/run/docker.sock}
 DOCKER_GROUP_ID=$(dscl . -read /Groups/docker | grep 'PrimaryGroupID:' |  awk '{print $2}')
 CONTAINER_USER_NAME="$(whoami | sed 's/\./_/g')"
-WORKSPACE=/home/$CONTAINER_USER_NAME/Anyscale
+WORKSPACE=/home/$CONTAINER_USER_NAME/myworkspace
 
 # Function to print usage
 log_usage() {
