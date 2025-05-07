@@ -1,6 +1,6 @@
 # ray_mac_dev
 
-Apache Ray containerized developer environment for Mac
+Ray containerized developer environment for Mac
 
 
 ## Install Docker for Mac
@@ -8,7 +8,7 @@ Apache Ray containerized developer environment for Mac
 Install your favourite dev tools for Mac and Docker before proceeding.
 
 
-## Clone Apache Ray
+## Clone Ray
 
 Follow the instructions [here](https://docs.ray.io/en/latest/ray-contribute/development.html#id1) and clone the ray project.
 
